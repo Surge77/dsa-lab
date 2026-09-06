@@ -2,7 +2,7 @@
 
 A **Stack** is a linear data structure that follows the **LIFO** principle — **Last In, First Out**. The last element added is the first one to be removed.
 
-This implementation is part of the `Python_InsideOut` project and emphasizes clean design, performance, and interview-readiness.
+This implementation is part of the `dsa-lab` project and emphasizes clean design, performance, and interview-readiness.
 
 ---
 

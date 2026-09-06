@@ -13,7 +13,7 @@ The `setup.py` file in this project serves several important purposes:
 
 2. **Project Metadata**
    ```python
-   name="python_insideout"      # Package name used for installation
+   name="dsa_lab"      # Package name used for installation
    version="0.1"                # Project version for tracking updates
    packages=find_packages()     # Automatically finds all Python packages
    install_requires=[]          # List project dependencies here
@@ -55,17 +55,17 @@ The `setup.py` file in this project serves several important purposes:
 1. **Temporary Method (Command Line)**
    ```powershell
    # Windows PowerShell
-   $env:PYTHONPATH = "C:\Users\tdmne\OneDrive\Desktop\Projects\Python_InsideOut"
+   $env:PYTHONPATH = "C:\Users\tdmne\Desktop\experiments\dsa-lab"
    ```
 
 2. **Permanent Method (System Environment)**
    - Open System Properties → Advanced → Environment Variables
    - Add/Edit PYTHONPATH variable
-   - Add project root path: `C:\Users\tdmne\OneDrive\Desktop\Projects\Python_InsideOut`
+   - Add project root path: `C:\Users\tdmne\Desktop\experiments\dsa-lab`
 
 3. **Using .env File (Development)**
    ```env
-   PYTHONPATH=C:\Users\tdmne\OneDrive\Desktop\Projects\Python_InsideOut
+   PYTHONPATH=C:\Users\tdmne\Desktop\experiments\dsa-lab
    ```
 
 ### Best Practices
@@ -85,7 +85,7 @@ The `setup.py` file in this project serves several important purposes:
    - Use absolute imports in your code
    - Example:
      ```python
-     from python_insideout.data_structures import BinaryTree
+     from dsa_lab.data_structures import BinaryTree
      ```
    - Avoid relative imports when possible
 

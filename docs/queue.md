@@ -3,7 +3,7 @@
 A **Queue** is a linear data structure that follows the **FIFO** principle — *First In, First Out*.  
 It’s used where order matters, and the first element added should be the first one processed.
 
-This implementation is written **from scratch using Python lists**, as part of the `Python_InsideOut` learning project.
+This implementation is written **from scratch using Python lists**, as part of the `dsa-lab` learning project.
 
 ---
 

@@ -2,7 +2,7 @@
 
 A **Doubly Linked List** is a linear data structure where each node points both **forward** and **backward**, enabling efficient two-way traversal.
 
-This implementation is part of the `Python_InsideOut` project and focuses on clean code, performance, and interview-readiness.
+This implementation is part of the `dsa-lab` project and focuses on clean code, performance, and interview-readiness.
 
 ---
 

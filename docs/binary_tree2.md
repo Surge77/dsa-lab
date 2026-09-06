@@ -1,6 +1,6 @@
 # 🌳 Binary Tree Implementation 
 
-This module provides a full implementation of a **Binary Tree** from scratch in Python, without using built-in data structures beyond lists. It's part of the `Python_InsideOut` project under `non_linear/trees/`.
+This module provides a full implementation of a **Binary Tree** from scratch in Python, without using built-in data structures beyond lists. It's part of the `dsa-lab` project under `non_linear/trees/`.
 
 ---
 
