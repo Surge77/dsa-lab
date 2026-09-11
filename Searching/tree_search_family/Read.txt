@@ -1,1 +1,0 @@
-There are other tree search algorithms like bst search,dfs and bfs which are already implemented in the tree kindly reference them 

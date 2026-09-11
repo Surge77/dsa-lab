@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsa-lab"
+version = "0.2.0"
+description = "Data structures and algorithms implemented from scratch, with a spaced-repetition drill system for revision."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "TEJAS", email = "tejasdeshmane66@gmail.com" }]
+keywords = ["data structures", "algorithms", "python", "interview prep", "spaced repetition"]
+classifiers = [
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.5"]
+
+[project.scripts]
+dsa-drill = "drill:main"
+
+[project.urls]
+Homepage = "https://github.com/tdmne/dsa-lab"
+
+[tool.setuptools]
+packages = [
+    "Linear",
+    "Hash",
+    "Non_Linear",
+    "Searching",
+    "Sorting",
+    "Utils",
+    "curriculum",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["Tests"]
+python_files = ["test_*.py"]
+addopts = "-q --strict-markers"
+markers = [
+    "slow: takes noticeable wall-clock time (sleep sort, bogosort, timing harness)",
+    "flaky: depends on OS scheduling and may need a retry (sleep sort)",
+]
+
+[tool.coverage.run]
+source = ["Linear", "Hash", "Non_Linear", "Searching", "Sorting", "Utils"]
+omit = ["*/__init__.py"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# SIM is deliberately excluded. Its rules push explicit loops toward any()/all(),
+# if/else toward ternaries, and try/except/pass toward contextlib.suppress. Those
+# are good instincts in application code and bad ones here: the explicit loop IS
+# the thing being taught, and a reader reconstructing an algorithm needs to see
+# the mechanism rather than a comprehension that hides it. SIM115 is also simply
+# wrong for a k-way merge, which must hold k file handles open at once.
+select = ["E", "F", "W", "I", "UP", "B", "C4", "RET"]
+# E501: ASCII diagrams and complexity tables in the teaching headers run long.
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+# B011: bare `assert` is how pytest works.
+"Tests/*" = ["B011"]
+# B007: loop counters named `_`-less on purpose in repeat-N-times loops.
+"Tests/test_min_heap.py" = ["B011", "B007"]

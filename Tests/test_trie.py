@@ -1,7 +1,8 @@
 import unittest
 
 # Import your Trie and TrieNode classes here if in another file:
-from Non_Linear.Trie.trie import Trie, TrieNode
+from Non_Linear.trie.trie import Trie
+
 
 class TestTrie(unittest.TestCase):
 

@@ -1,5 +1,7 @@
 import unittest
-from Non_Linear.Heaps.max_heap import MaxHeap  # Adjust path if needed
+
+from Non_Linear.heaps.max_heap import MaxHeap  # Adjust path if needed
+
 
 class TestMaxHeap(unittest.TestCase):
 

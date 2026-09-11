@@ -1,5 +1,7 @@
 import unittest
-from Non_Linear.Heaps.min_heap import MinHeap  # Adjust import path as needed for your project
+
+from Non_Linear.heaps.min_heap import MinHeap  # Adjust import path as needed for your project
+
 
 class TestMinHeap(unittest.TestCase):
 

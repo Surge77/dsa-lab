@@ -1,11 +1,12 @@
 import unittest
-from Non_Linear.Graphs.Undirected.undirected_graph_base import Graph
-from Non_Linear.Graphs.Undirected.undirected_graph_utils import (
-    is_connected,
+
+from Non_Linear.graphs.undirected.undirected_graph_base import Graph
+from Non_Linear.graphs.undirected.undirected_graph_utils import (
+    clear,
+    clone,
     degree,
     edges,
-    clear,
-    clone
+    is_connected,
 )
 
 
