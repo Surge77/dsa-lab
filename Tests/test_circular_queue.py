@@ -1,5 +1,7 @@
 import unittest
+
 from Linear.circular_queue import CircularQueue
+
 
 class TestCircularQueue(unittest.TestCase):
 

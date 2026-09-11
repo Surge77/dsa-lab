@@ -1,5 +1,7 @@
 import unittest
+
 from Linear.deque import Deque
+
 
 class TestDeque(unittest.TestCase):
 

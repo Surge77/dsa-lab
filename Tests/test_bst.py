@@ -1,6 +1,9 @@
 # test_bst.py
 
-from Non_Linear.Trees.bst import BST, BSTNode  # Change 'your_bst_file' to your actual BST implementation file name
+from Non_Linear.trees.bst import (
+    BST,  # Change 'your_bst_file' to your actual BST implementation file name
+)
+
 
 def test_insert_and_inorder():
     bst = BST()

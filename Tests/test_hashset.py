@@ -1,5 +1,7 @@
 import unittest
+
 from Hash.hashset import HashSet
+
 
 class TestHashSet(unittest.TestCase):
 

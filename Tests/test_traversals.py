@@ -1,6 +1,8 @@
-from Non_Linear.Trees.binary_tree import Node, BinaryTree
-from Non_Linear.Trees.traversals import TreeTraversals
 import unittest
+
+from Non_Linear.trees.binary_tree import BinaryTree, Node
+from Non_Linear.trees.traversals import TreeTraversals
+
 
 class TestIterativeTraversals(unittest.TestCase):
 

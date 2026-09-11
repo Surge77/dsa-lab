@@ -1,5 +1,7 @@
 import unittest
-from Non_Linear.Trees.binary_tree import Node, BinaryTree
+
+from Non_Linear.trees.binary_tree import BinaryTree, Node
+
 
 class TestBinaryTree(unittest.TestCase):
 
