@@ -1,50 +1,170 @@
-## Lowest common ancestor
+# 🌳 Binary Tree Implementation 
 
-### Goal:
+This module provides a full implementation of a **Binary Tree** from scratch in Python, without using built-in data structures beyond lists. It's part of the `dsa-lab` project under `non_linear/trees/`.
 
-Given a binary tree and two node values p_val and q_val, find the lowest (deepest i.e closer to the leaves), node in the tree that is an ancestor of both nodes.
+---
 
-LCA in simple words:
+## 📦 File: `binary_tree.py`
 
-- The node must be an ancestor of both p and q
+### 🔹 Classes
 
-- Among all such ancestors, we want the one closest to the leaves
+---
 
-- Which also means it's farthest from the root
+### `class Node`
+Represents a single node in the binary tree.
 
-## 🪓 First Principles Breakdown
+#### Attributes:
+- `value (int)`: Value stored at the node.
+- `left (Node)`: Reference to the left child.
+- `right (Node)`: Reference to the right child.
 
-## ✅ Principle 1: A node is an ancestor if both p and q exist in its subtree.
+---
 
-A node is an ancestor of p and q if:
+### `class BinaryTree`
+Encapsulates the tree and provides all core operations.
 
-One is found in its left subtree and the other in the right, or
+---
 
-The node itself is p or q, and the other exists in one of its subtrees.
+## 🔹 Methods
 
-## ✅ Principle 2: Recursive Tree Traversal is optimal
+### ✅ `insert(value: int) -> None`
+Inserts a node using **level-order** (BFS-like) strategy to keep tree balanced.
+- ⏱ Time: O(n)
+- 💾 Space: O(n)
 
-Binary trees are naturally recursive structures.
+---
 
-We can recursively search both subtrees to find p and q.
+### ✅ `level_order_traversal() -> list[int]`
+Returns a list of node values in **level-order** (BFS).
+- ⏱ Time: O(n)
+- 💾 Space: O(n)
 
-## ✅ Principle 3: Decision logic at each node
+---
 
-At every node:
+### ✅ `inorder() -> list[int]`
+Returns **inorder traversal** (Left → Root → Right).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
 
-If the node is None, return None (base case).
+---
 
-If the node’s value is p_val or q_val, return this node.
+### ✅ `preorder() -> list[int]`
+Returns **preorder traversal** (Root → Left → Right).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
 
-Otherwise:
+---
 
-Recurse on left and right subtrees.
+### ✅ `postorder() -> list[int]`
+Returns **postorder traversal** (Left → Right → Root).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
 
-If both sides return non-None, current node is LCA.
+---
 
-If one side is non-None, bubble it up.
+### ✅ `search(target: int) -> bool`
+Performs level-order search for a node with the given value.
+- ⏱ Time: O(n)
+- 💾 Space: O(n)
 
-### Term Used	Meaning in LCA Trees
+---
 
-- "Lower" means	Deeper in the tree (farther from root)
-- "Higher" means	Closer to the root
+### ✅ `height() -> int`
+Calculates the **height** (depth) of the binary tree.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `count_leaf_nodes() -> int`
+Counts total **leaf nodes** (nodes with no children).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `delete(target: int) -> bool`
+Deletes a node by replacing it with the **deepest rightmost node**.
+- ⏱ Time: O(n)
+- 💾 Space: O(n)
+
+---
+
+### ✅ `diameter() -> int`
+Computes the **longest path** (in number of nodes) between any two nodes.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `mirror() -> None`
+Modifies the tree to be its **mirror image**, in-place.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `is_symmetric() -> bool`
+Checks if the tree is **symmetric** (mirror around center).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `lowest_common_ancestor(p_val: int, q_val: int) -> int`
+Finds the **lowest common ancestor** of two nodes.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `path_to_node(target: int) -> list[int]`
+Returns the **path** from root to a node (if exists).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `max_path_sum() -> int`
+Finds the **maximum path sum** (any node to any node).
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `max_root_to_leaf_sum() -> int`
+Finds the **maximum sum** from root to any leaf.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `min_root_to_leaf_sum() -> int`
+Finds the **minimum sum** from root to any leaf.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+### ✅ `min_root_to_leaf_path() -> list[int]`
+Returns the actual **minimum path (values)** from root to leaf.
+- ⏱ Time: O(n)
+- 💾 Space: O(h)
+
+---
+
+
+## 🧪 Test File
+
+Use `Tests/test_binary_tree.py` with `unittest`:
+```bash
+python -m unittest Tests.test_binary_tree
+```
+
+Or discover all:
+```bash
+python -m unittest discover -s Tests
+```
+
+---
+
